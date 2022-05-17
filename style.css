@@ -1,0 +1,246 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap');
+
+:root {
+    --Blue: hsl(223, 87%, 63%);
+    --Pale_Blue: hsl(223, 100%, 88%);
+    --Light_Red: hsl(354, 100%, 66%);
+    --Gray: hsl(0, 0%, 59%);
+    --Very_Dark_Blue: hsl(209, 33%, 12%);
+}
+
+
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    text-align: center;
+    font-family: 'Libre Franklin', sans-serif;;
+    font-size: 20px;
+}
+
+a {
+    text-decoration: none;
+}
+
+header {
+    display: block;
+    margin: auto;
+    width: 55px;
+    padding: 82px 0 34px;
+}
+
+header img {
+    max-width: 100%;
+    height: auto;
+}
+
+.subscription {
+    padding: 0 47px;
+}
+
+h1 {
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-bottom: 18px;
+}
+
+h1 span {
+    font-weight: 500;
+    color: var(--Gray);
+}
+
+.subscription p {
+    font-size: 0.6rem;
+    color: var(--Very_Dark_Blue);
+}
+
+form {
+    position: relative;
+    height: 189px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    gap: 6px;
+    padding-top: 32px;
+}
+
+input {
+    padding-left: 25px;
+    border: 1px solid var(--Pale_Blue);
+}
+
+input:focus {
+    outline: 1px solid var(--Blue);
+}
+
+input::placeholder {
+    opacity: 0.3;
+}
+
+input:invalid {
+    border: 1px solid var(--Light_Red);
+}
+
+input:invalid:focus {
+    border: 1px solid var(--Light_Red);
+    outline: 1px solid var(--Light_Red);
+}
+
+form > *:not(span) {
+    width: 100%;
+    height: 40px;
+    border-radius: 45px;
+}
+
+.error-message {
+    display: none;
+    width: 100%;
+    margin-bottom: 14px;
+    text-align: center;
+    font-size: 0.48rem;
+    font-style: italic;
+    color: var(--Light_Red);
+}
+
+button {
+    margin-top: 4px;
+    background-color: var(--Blue);
+    color: white;
+    border: 1px solid var(--Blue);
+    box-shadow: 0 10px 8px hsla(223, 87%, 63%, 0.2);
+    cursor: pointer;
+}
+
+button:hover {
+    filter: brightness(1.15);
+}
+
+.illustration {
+    padding: 0 7.5% 110px;
+}
+
+.illustration img {
+    max-width: 100%;
+    margin: auto;
+}
+
+.social-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 17px;
+}
+
+.social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 31px;
+    height: 31px;
+    border: 1px solid var(--Pale_Blue);
+    border-radius: 50%;
+}
+
+.social-links a:hover,
+.social-links a:hover i {
+    background-color: var(--Blue);
+    color: white;
+}
+
+.social-links i {
+    color: var(--Blue)
+}
+
+.social-links .fa-facebook-f {
+    font-size: 0.73rem;
+}
+
+.social-links .fa-twitter {
+    font-size: 0.7rem;
+}
+
+.social-links .fa-instagram {
+    font-size: 0.85rem;
+}
+
+footer span {
+    padding-bottom: 1.8rem;
+    font-size: 0.49rem;
+    color: var(--Gray)
+}
+
+.attribution { 
+    font-size: 0.5rem;
+    text-align: center;
+    line-height: 1.5rem;
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+@media screen and (min-width: 843px) {
+    header {
+        width: 150px;
+        padding: 85px 0 44px;
+    }
+
+    main {
+        max-width: 730px;
+        display: block;
+        margin: 0 auto;
+    }
+
+    h1 {
+        font-size: 2.4rem;
+        margin-bottom: 17px;
+    }
+
+    .subscription p {
+        font-size: 1rem;
+    }
+
+    form {
+        height: 183px;
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 37px 0 0;
+    }
+
+    form > *:not(span) {
+        height: 56px;
+    }
+
+    .error-message {
+        position: absolute;
+        top: 105px;
+        text-align: left;
+        padding-left: 25px;
+        font-size: 0.5rem;
+    }
+
+    button {
+        max-width: 200px;
+        margin: 0;
+        font-size: 0.8rem;
+    }
+
+    .illustration {
+        padding: 0 0 62px;
+    }
+    
+    .illustration img {
+        max-width: 645px;
+        margin: auto;
+    }
+
+    footer span {
+        font-size: 0.6rem;
+    }
+  }
